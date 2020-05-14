@@ -1,207 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="lib/jquery/jquery.min.js"></script>
-        <script src="lib/jquery/jquery-migrate.min.js"></script>
-        <script type="text/javascript">
 
-            $(document).ready(function(){
-            $("#search").click(function(){
-            alert("查询结果: " + "查询  "+$("#input").val()+"  成功");
-            });
-          });
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="css/widescreen.css">
+    <title>flex布局</title>
+</head>
 
-            $(document).ready(function(){
-            $("#MENU").click(function(){
-            $("#price").slideToggle("fast");
-            });
-          });
-
-            $(document).ready(function(){
-            $("#hide1").click(function(){
-            $("#p1").fadeToggle(2000);
-            });
-          });
-            $(document).ready(function(){
-            $("#hide2").click(function(){
-            $("#p2").fadeToggle(2000);
-            });
-          });
-             $(document).ready(function(){
-            $("#hide3").click(function(){
-            $("#p3").fadeToggle(2000);
-            });
-          });
-             $(document).ready(function(){
-            $("#hide4").click(function(){
-            $("#p4").fadeToggle(2000);
-            });
-          });
-          $(document).ready(function(){
-            $("#hide5").click(function(){
-            $("#p5").fadeToggle(2000);
-            });
-          });
-        </script>
-
-        <script>
-            function myFunction() {
-               /* x=document.getElementById("input").nodeValue;*/ 
-                alert("查询结果成功");
-        }
-        </script>
-
-        <meta charset="UTF-8">
-        <title>咖啡订购系统</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <div id="container">
-            <div id="header">
-                <p><img src="images/banner.jpg"></p>
-                <div id="icon-list">
-                    <img src="images/11.jpg" alt="">
-                    <img src="images/12.jpg" alt="">
-                    <img src="images/13.jpg" alt="">
-                    <img src="images/14.jpg" alt="">
+<body>
+    <nav id="navbar">
+        <h1 class="logo">
+            <span class="text-primary">
+                <i class="fas fa-book-open"></i>
+            </span>
+            LoGO名称
+        </h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#what">What</a></li>
+            <li><a href="#who">Who</a></li>
+            <li><a href="#contact">Contant</a></li>
+        </ul>
+    </nav>
+    <!-- header:home -->
+    <header id="home">
+        <div class="home-content">
+            <h1 class="l-header">欢迎来到我的博客</h1>
+            <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ex quisquam aliquid! Voluptate tempore
+                delectus eligendi nemo adipisci labore placeat animi facere impedit deserunt quisquam saepe quis,
+                sapiente, omnis in?
+            </p>
+            <a href="#what" class="btn">阅读更多</a>
+        </div>
+    </header>
+    <!-- section what we do -->
+    <section id="what" class="bg-light py-1">
+        <div class="container">
+            <h2 class="m-header text-center"><span class="text-primary">What</span> We Do</h2>
+            <div class="items">
+                <div class="item">
+                    <i class="fas fa-university fa-2x"></i>
+                    <h3>内容一标题</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, est eius et, aut quisquam ea
+                        voluptatibus inventore architecto, incidunt quam repellendus. Error quas nobis animi cupiditate
+                        harum est labore nihil.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-book-reader fa-2x"></i>
+                    <h3>内容二标题</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, est eius et, aut quisquam ea
+                        voluptatibus inventore architecto, incidunt quam repellendus. Error quas nobis animi cupiditate
+                        harum est labore nihil.</p>
+                </div>
+                <div class="item">
+                    <i class="fas fa-pencil-alt fa-2x"></i>
+                    <h3>内容三标题</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, est eius et, aut quisquam ea
+                        voluptatibus inventore architecto, incidunt quam repellendus. Error quas nobis animi cupiditate
+                        harum est labore nihil.</p>
                 </div>
             </div>
-            <div id="nav">
-                <a href="#">首页</a>
-                <a href="#">产品简介</a>
-                <a href="#">点餐系统</a>
-                <a href="#">活动详情</a>
-                <a href="#">联系我们</a>
-                <input type="text" id="input" >
-                <button id="search">查询</button>
+        </div>
+    </section>
+    <!-- section:who we are -->
+    <section id="who">
+        <div class="who-img">
+
+        </div>
+        <div class="who-text bg-dark p-2">
+            <h2 class="m-heading"><span class="text-primary">Who</span> We Are
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ex illo optio impedit quam amet
+                obcaecati est veritatis cumque blanditiis mollitia doloremque esse vero natus repellendus, commodi
+                laborum ea nemo.</p>
+            <h3>Our Team</h3>
+            <ul class="list">
+                <li>成员1</li>
+                <li>成员2</li>
+                <li>成员3</li>
+                <li>成员4</li>
+                <li>成员5</li>
+            </ul>
+        </div>
+    </section>
+    <!-- section:clients -->
+    <section id="clients" class="py-1">
+        <div class="container">
+            <h2 class="m-heading text-center"><span class="text-primary">Our</span> clients</h2>
+            <div class="items py-1">
+                <div><img src="./img/logo.jpg" alt="clients"></div>
+                <div><img src="./img/logo.jpg" alt="clients"></div>
+                <div><img src="./img/logo.jpg" alt="clients"></div>
+                <div><img src="./img/logo.jpg" alt="clients"></div>
+                <div><img src="./img/logo.jpg" alt="clients"></div>
             </div>
-            <div id="main">
-                <div id="aside">
-                    <div id="aside-top">
-                        <h2 id="MENU">咖啡MENU(点击查看)</h2>
-                        <table id="price">
-                             <tr>
-                                <td>单价</td>
-                                <td>小杯</td>
-                                <td>中杯</td>
-                                <td>大杯</td>
-                            </tr>
-                            <tr>
-                                <td>卡布奇诺</td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>拿铁</td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>摩卡</td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                            </tr>
-                            <tr>
-                                <td>白咖啡</td>
-                                <td>10</td>
-                                <td>15</td>
-                                <td>20</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="imglist">
-                        <div class="pol rotate-left"><img src="images/1.jpg" alt=""></div>
-                        <div class="pol rotate-right"><img src="images/2.jpg" alt=""></div>
-                        <div class="pol rotate-left"><img src="images/3.jpg" alt=""></div>
-                        <div class="pol rotate-right"><img src="images/4.jpg" alt=""></div>
-                    </div>
+        </div>
+    </section>
+    <!-- section:contact -->
+    <section id="contact">
+        <div class="contact-form bg-primary py-2">
+            <h2 class="m-heading">Contact Us</h2>
+            <p>如有疑问请联系以下</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" name="name" id="name" placeholder="请输入姓名">
                 </div>
-                <div id="content">
-                    <div class="subcon">
-                        <img src="images/1.jpg" alt="卡布奇诺">
-                        <div class="subtext">
-                            <h2>卡布奇诺（Cappuccino）</h2>
-                            <button id="hide1" type="button">点击显示隐藏详细内容</button>
-                            <p id="p1">
-                                传统的卡布奇诺咖啡是三分之一浓缩咖啡，
-                                三分之一蒸汽牛奶和三分之一泡沫牛奶。
-                                卡布奇诺分为干和湿两种。
-                                干卡布奇诺(Dry Cappuccino)是指奶泡较多，
-                                牛奶较少的调理法，喝起来咖啡味浓过奶香。
-                                湿卡布奇诺(Wet Cappuccino)则指奶泡较少，
-                                牛奶量较多的做法，奶香盖过浓呛的咖啡味，
-                                适合口味清淡者。
-                            </p>
-                            
-                        </div>
-                    </div>
-                    <div class="subcon">
-                        <img src="images/2.jpg" alt="拿铁">
-                        <div class="subtext">
-                            <h2>拿铁（Caffè Latte）</h2>
-                            <button id="hide2" type="button">点击显示隐藏详细内容</button>
-                            <p id="p2">
-                                拿铁咖啡做法极其简单，
-                                就是在刚刚做好的意大利浓缩咖啡中倒入接近沸腾的牛奶。
-                                事实上，加入多少牛奶没有一定之规，
-                                可依个人口味自由调配。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="subcon">
-                        <img src="images/3.jpg" alt="摩卡">
-                        <div class="subtext">
-                            <h2>摩卡（Caffè Mocha）</h2>
-                            <button id="hide3" type="button">点击显示隐藏详细内容</button>
-                            <p id="p3">
-                                一种最古老的咖啡，得名于著名的摩卡港。
-                                摩卡是由意大利浓缩咖啡、巧克力糖浆、
-                                鲜奶油和牛奶混合而成的，是意式拿铁咖啡的变种。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="subcon">
-                        <img src="images/4.jpg" alt="速溶">
-                        <div class="subtext">
-                            <h2>白咖啡（Flat White）</h2>
-                            <button id="hide4" type="button">点击显示隐藏详细内容</button>
-                            <p id="p4">
-                                马来西亚土特产，约有100多年的历史。
-                                白咖啡并不是指咖啡的颜色是白色的，
-                                而是采用特等咖啡豆及特级脱脂奶精原料，
-                                经特殊工艺加工后得到的咖啡，甘醇芳香不伤肠胃，
-                                保留了咖啡原有的色泽和香味，颜色比普通咖啡更清淡柔和
-                                故得名为白咖啡。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="subcon">
-                        <img src="images/4.jpg" alt="速溶">
-                        <div class="subtext">
-                            <h2>速溶</h2>
-                            <button id="hide5" type="button">点击显示隐藏详细内容</button>
-                            <p id="p5">
-                                咖啡树原产于非洲埃塞俄比亚西南部的高原地区。
-                                据说一千多年以前一位牧羊人发现羊吃了一种植物后，
-                                变得非常兴奋活泼，进而发现了咖啡。
-                                还有说法称是因野火偶然烧毁了一片咖啡林，
-                                烧烤咖啡的香味引起周围居民注意。
-                            </p>
-                        </div>
-                    </div>
-            </div>
-            <div id="footer">
-                
-                    <b>联系电话：——————————————      邮箱：@**********</b>
-                
-                
-            </div>
+                <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type=" email" name="email" id="email" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group">
+                    <label for="phone">姓名</label>
+                    <input type="text" name="phone" id="phone" placeholder="请输入电话">
+                </div>
+                <div class="form-group">
+                    <label for="message">反馈信息</label>
+                    <textarea type="text" name="message" id="message" placeholder="请输入反馈信息">
+                        </textarea>
+                </div>
+            </form>
+            <input type="submit" class="btn btn-dark">
         </div>
-        <div id="l-fix">
-            <img src="images/1.jpg" alt="">
+        <div class="contact-img">
         </div>
-    </body>
+    </section>
+    <!-- footer -->
+    <footer id="main-footer" class="bg-dark text-center py-1">
+        <div class="container">
+            <p>联系方式:***********</p>
+        </div>
+    </footer>
+
+</body>
+
 </html>
